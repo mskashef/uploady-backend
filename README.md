@@ -194,6 +194,7 @@ no response data
 **Supports Header Range:** like: `Range: bytes=0-1024`
 
 **Url:** `/files/{owner}/{vid}/size`
+
 **Params:**
 
 `percentage`: number from 1 to 500 (in '%' unit)
@@ -204,6 +205,7 @@ no response data
 Partial Content: File
 
 **400 :**
+
 "Percentage must be between 1 and 500!"
 
 or
