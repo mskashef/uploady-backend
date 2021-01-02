@@ -17,7 +17,9 @@ const app = express();
 app.use(session({secret: 'keyboard cat', cookie: {maxAge: 365 * 24 * 60 * 60 * 1000}}));
 app.use(session({secret: '1234', saveUninitialized: true, resave: true}));
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+    exposedHeaders: ['Content-Length', 'Content-Range', 'Accept-Ranges'],
+}));
 app.use(fileUpload());
 app.use(express.json());        // to support JSON-encoded bodies
 app.use(express.urlencoded());  // to support URL-encoded bodies
